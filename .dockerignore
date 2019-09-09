@@ -1,0 +1,14 @@
+.git/
+.vs/
+.vscode/
+.idea/
+build/
+docs/
+scripts/
+**/bin/
+**/obj/
+**/packages/
+**/TestResults/
+**/node_modules/
+**/publish/
+**/coverage/

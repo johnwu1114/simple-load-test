@@ -1,0 +1,15 @@
+# docker-compose -p simple-load-test -f ./build/docker-compose.test.yml up --build --force-recreate --abort-on-container-exit
+
+version: "3"
+services:
+  mongo:
+    image: mongo
+
+  test-target:
+    build:
+      context: ../
+      dockerfile: ./build/build-test.dockerfile
+    depends_on:
+      - mongo
+    links:
+      - mongo
